@@ -48,3 +48,4 @@ services:
     entrypoint: "dockerize -wait tcp://mysql:3306 -wait tcp://redis:6379 -timeout 60s /opt/archery/src/docker/startup.sh"
     env_file:
       - .env
+    privileged: true
